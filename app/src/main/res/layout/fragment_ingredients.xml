@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.myapplication.ingredients.IngredientsViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/main_photo_image"
+                android:layout_width="0dp"
+                android:layout_height="266dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{viewModel.selectedRecipe.imgSrcUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/recipe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#de000000"
+                android:textSize="39sp"
+                android:text="@{viewModel.selectedRecipe.strMeal}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image"
+                tools:text="Name Of The Recipe" />
+
+            <CheckedTextView
+                android:id="@+id/ingredient1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient1}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipe_name"
+                tools:text="Ingredient1" />
+
+            <TextView
+                android:id="@+id/measurement1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@{viewModel.selectedRecipe.strMeasure1}"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient1"
+                tools:text="Measurement1" />
+
+            <CheckedTextView
+                android:id="@+id/ingredient2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient2}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient1"
+                tools:text="Ingredient2" />
+
+            <TextView
+                android:id="@+id/measurement2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:text="@{viewModel.selectedRecipe.strMeasure2}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient2"
+                tools:text="Measurement2" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient3}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient2"
+                tools:text="Ingredient3" />
+
+            <TextView
+                android:id="@+id/measurement3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure3}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient3"
+                tools:text="Measurement3" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient4}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient3"
+                tools:text="Ingredient4" />
+
+            <TextView
+                android:id="@+id/measurement4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure4}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient4"
+                tools:text="Measurement4" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient5}"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient4"
+                tools:text="Ingredient5" />
+
+            <TextView
+                android:id="@+id/measurement5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure5}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient5"
+                tools:text="Measurement5" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient6}"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient5"
+                tools:text="Ingredient6" />
+
+            <TextView
+                android:id="@+id/measurement6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure6}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient6"
+                tools:text="Measurement6" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient7}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient6"
+                tools:text="Ingredient7" />
+
+            <TextView
+                android:id="@+id/measurement7"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure7}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient7"
+                tools:text="Measurement7" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient8}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient7"
+                tools:text="Ingredient8" />
+
+            <TextView
+                android:id="@+id/measurement8"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure8}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient8"
+                tools:text="Measurement8" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient9}"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient8"
+                tools:text="Ingredient9" />
+
+            <TextView
+                android:id="@+id/measurement9"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure9}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient9"
+                tools:text="Measurement9" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient10}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient9"
+                tools:text="Ingredient10" />
+
+            <TextView
+                android:id="@+id/measurement10"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure10}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient10"
+                tools:text="Measurement10" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient11}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient10"
+                tools:text="Ingredient11" />
+
+            <TextView
+                android:id="@+id/measurement11"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure11}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient11"
+                tools:text="Measurement11" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient12}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient11"
+                tools:text="Ingredient12" />
+
+            <TextView
+                android:id="@+id/measurement12"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure12}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient12"
+                tools:text="Measurement12" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient13}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient12"
+                tools:text="Ingredient13" />
+
+            <TextView
+                android:id="@+id/measurement13"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure13}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient13"
+                tools:text="Measurement13" />
+
+
+            <CheckedTextView
+                android:id="@+id/ingredient14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ingredients"
+                android:text="@{viewModel.selectedRecipe.strIngredient14}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredient13"
+                tools:text="Ingredient14" />
+
+            <TextView
+                android:id="@+id/measurement14"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:text="@{viewModel.selectedRecipe.strMeasure14}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient14"
+                tools:text="Measurement14" />
+
+            <CheckedTextView
+                android:id="@+id/ingredient15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:clickable="true"
+                android:text="@{viewModel.selectedRecipe.strIngredient15}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredient14"
+                tools:text = "Ingredient 15"/>
+
+            <TextView
+                android:id="@+id/measurement15"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:text="@{viewModel.selectedRecipe.strMeasure15}"
+                app:layout_constraintBottom_toBottomOf="@+id/ingredient15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ingredient15"
+                tools:text="Measurement15" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/go_to_instructions"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/measurement15" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
