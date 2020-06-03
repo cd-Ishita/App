@@ -25,6 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_height="266dp"
                 android:scaleType="centerCrop"
+                android:contentDescription="@string/picture_of_recipe"
                 app:imageUrl="@{viewModel.selectedRecipe.imgSrcUrl}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

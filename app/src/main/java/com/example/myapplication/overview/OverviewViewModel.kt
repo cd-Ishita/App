@@ -34,31 +34,27 @@ class OverviewViewModel : ViewModel() {
 
     init {
 
-        getRecipes()
+        getRecipes("pasta")
     }
 
-    private fun getRecipes() {
-    /*    MyApi.retrofitService.getRecipes().enqueue( object: Callback<Bleh> {
+    fun text(text: String){
+        getRecipes(text)
+    }
 
-            override fun onFailure(call: Call<Bleh>, t: Throwable) {
-                _response.value = "Failure: " + t.message
-            }
-
-            override fun onResponse(call: Call<Bleh>, response: Response<Bleh>) {
-                _response.value = "Success: ${response.body()?.meals?.size}"
-            }
-        })*/
+    private fun getRecipes(text: String) {
 
         coroutineScope.launch {
-            var getRecipesDeferred = MyApi.retrofitService.getRecipes()
+            var getRecipesDeferred = MyApi.retrofitService.getRecipes(text)
             try {
-
+                println("12")
                 _status.value = MyApiStatus.LOADING
 
                 var listResult = getRecipesDeferred.await()
+                println("34")
                 _status.value = MyApiStatus.DONE
                 _recipes.value = listResult.meals
             } catch (e: Exception) {
+                println("56")
                 _status.value = MyApiStatus.ERROR
                 _recipes.value = ArrayList()
             }
