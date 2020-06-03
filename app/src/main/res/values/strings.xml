@@ -6,4 +6,5 @@
     <string name="go_to_instructions">Go to Instructions</string>
     <string name="instructions">Instructions:</string>
     <string name="enter_search_term">Enter search term</string>
+    <string name="hello">Hello</string>
 </resources>

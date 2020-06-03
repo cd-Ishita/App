@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -11,20 +10,28 @@
             type="com.example.myapplication.network.MyRecipe" />
     </data>
 
-
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="6dp"
+        app:contentPadding= "6dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         app:cardCornerRadius="6dp"
-        app:cardElevation="6dp">
-
-
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true"
+        app:cardElevation="12dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:padding="8dp"
             android:orientation="vertical">
 
@@ -32,12 +39,12 @@
             <ImageView
                 android:id="@+id/recipe_image"
                 android:layout_width="wrap_content"
-                android:layout_height="130dp"
-                android:layout_marginStart="16dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:adjustViewBounds="true"
-                android:padding="2dp"
+                android:padding="20dp"
                 android:scaleType="centerCrop"
                 app:imageUrl="@{recipe.imgSrcUrl}"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -47,9 +54,13 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_width="150dp"
+                android:maxWidth="150dp"
+
+                android:layout_height="120dp"
+                android:layout_marginStart="-299dp"
+                android:padding="5dp"
+                android:layout_toEndOf="@+id/recipe_image"
                 android:text="@{recipe.strMeal}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

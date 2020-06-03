@@ -23,5 +23,18 @@
         <argument
             android:name="selectedRecipe"
             app:argType="com.example.myapplication.network.MyRecipe" />
+        <action
+            android:id="@+id/action_ingredientsFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.myapplication.instructions.InstructionsFragment"
+        android:label="InstructionsFragment">
+
+        <argument
+            android:name="selection"
+            app:argType="com.example.myapplication.network.MyRecipe" />
+    </fragment>
+
 </navigation>

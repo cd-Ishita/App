@@ -49,15 +49,3 @@ fun bindStatus(statusImageView: ImageView, status: MyApiStatus?) {
     }
 }
 
-//@BindingAdapter("ingredientValue")
-//fun ingredientValue(statusCheckBox: CheckBox, status: IngredientValue?) {
-//    when (status) {
-//        IngredientValue.NULL -> {
-//            statusCheckBox.visibility = View.GONE
-//        }
-//
-//        IngredientValue.FILL -> {
-//            statusCheckBox.visibility = View.VISIBLE
-//        }
-//    }
-//}

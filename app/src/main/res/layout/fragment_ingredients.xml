@@ -7,7 +7,7 @@
         <variable
             name="viewModel"
             type="com.example.myapplication.ingredients.IngredientsViewModel" />
-
+        <import type="android.view.View" />
     </data>
 
     <ScrollView
