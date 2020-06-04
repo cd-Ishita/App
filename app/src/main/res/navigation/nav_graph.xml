@@ -34,7 +34,8 @@
 
         <argument
             android:name="selection"
-            app:argType="com.example.myapplication.network.MyRecipe" />
+            android:defaultValue="Sorry"
+            app:argType="string" />
     </fragment>
 
 </navigation>

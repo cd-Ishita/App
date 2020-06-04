@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Winner Winner Chicken Dinner</string>
+    <string name="app_name">Meal Steals</string>
     <string name="show_all">Show all</string>
     <string name = "ingredients">Ingredients</string>
     <string name="picture_of_recipe">Picture of the Recipe</string>
