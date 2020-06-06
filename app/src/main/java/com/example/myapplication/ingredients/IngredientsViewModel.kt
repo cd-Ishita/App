@@ -17,3 +17,21 @@ class IngredientsViewModel(myRecipe: MyRecipe, app: Application) : AndroidViewMo
     }
 
 }
+
+//    val _onClick = MutableLiveData<Boolean>()
+//    val onClick: LiveData<Boolean>
+//        get() = _onClick
+//
+//    val _meme = MutableLiveData<String>()
+//    val meme: LiveData<String>
+//        get() = _meme
+
+
+
+//    fun onClicked() {
+//        _onClick.value = true
+//    }
+//
+//    fun onClickedComplete() {
+//        _onClick.value = false
+//    }

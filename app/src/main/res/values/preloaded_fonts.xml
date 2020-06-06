@@ -3,5 +3,9 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alfa_slab_one</item>
         <item>@font/cherry_cream_soda</item>
+        <item>@font/happy_monkey</item>
+        <item>@font/montserrat</item>
+        <item>@font/oswald_bold</item>
+        <item>@font/syncopate_bold</item>
     </array>
 </resources>

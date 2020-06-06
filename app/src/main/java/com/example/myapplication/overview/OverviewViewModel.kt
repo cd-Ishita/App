@@ -34,7 +34,7 @@ class OverviewViewModel : ViewModel() {
 
     init {
 
-        getRecipes("pasta")
+        getRecipes(" ")
     }
 
     fun text(text: String){
@@ -46,15 +46,15 @@ class OverviewViewModel : ViewModel() {
         coroutineScope.launch {
             var getRecipesDeferred = MyApi.retrofitService.getRecipes(text)
             try {
-                println("12")
+
                 _status.value = MyApiStatus.LOADING
 
                 var listResult = getRecipesDeferred.await()
-                println("34")
+
                 _status.value = MyApiStatus.DONE
                 _recipes.value = listResult.meals
             } catch (e: Exception) {
-                println("56")
+
                 _status.value = MyApiStatus.ERROR
                 _recipes.value = ArrayList()
             }
